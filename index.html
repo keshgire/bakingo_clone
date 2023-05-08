@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakingo_Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./SCSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="section1">
+                <h1>bakingo</h1>
+                <i class="fa-solid fa-location-dot"></i>
+                <label>City</label>
+                <select name="city"
+                    style="background:transparent; border:0px; padding:0px; margin-left: -15px; width: 20px;">
+                    <option value="list1">Pune</option>
+                    <option value="list2">Mumbai</option>
+                    <option value="list3">Hydrabad</option>
+                </select>
+            </div>
+            <div class="section2">
+                <!-- <input type="text" placeholder="Search for cakes,flowers and more"> -->
+                <input type="search" placeholder="Search for cakes,flowers and more">
+                <button type="submit">Search</button>
+            </div>
+            <div class="section3">
+                <div>
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/000/512/317/small/235_-_2_-_Wallet.jpg"
+                        alt="Wallet">
+                    <h4>Wallet</h4>
+                </div>
+                <div>
+                    <img src="https://static.vecteezy.com/system/resources/previews/010/575/080/original/parcel-tracking-icon-logo-illustration-track-order-symbol-template-for-graphic-and-web-design-collection-free-vector.jpg"
+                        alt="Track Order">
+                    <h4>Track Order</h4>
+                </div>
+                <div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtROumYAtB3QJIEKlySXwnBdFJlKmv_NS8OpQl6ONvXA&usqp=CAU&ec=48600113"
+                        alt="Login/Signup">
+                    <h4>Login/Signup</h4>
+                </div>
+                <div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrnNgOku5wPAWSik01QokaPlAns7mbY2NGB25ICzQrCQ&usqp=CAU&ec=48600113"
+                        alt="Cart">
+                    <h4>My Cart</h4>
+                </div>
+                <div>
+                    <img src="data:image/png;base64,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"
+                        alt="More">
+                    <h4>More</h4>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <header class="middle-header">
+        <div>
+            <label>Flavours</label>
+            <select name="city" style="background:transparent; border:0px; padding:0px; margin-left: 0px; width: 20px;">
+                <option value="list1">Pune</option>
+                <option value="list2">Mumbai</option>
+                <option value="list3">Hydrabad</option>
+            </select>
+        </div>
+        <div>
+            <label>Catagory</label>
+            <select name="city" style="background:transparent; border:0px; padding:0px; margin-left: 0px; width: 20px;">
+                <option value="list1">Pune</option>
+                <option value="list2">Mumbai</option>
+                <option value="list3">Hydrabad</option>
+            </select>
+        </div>
+        <div>
+            <label>Kids Cakes</label>
+            <select name="city" style="background:transparent; border:0px; padding:0px; margin-left: 0px; width: 20px;">
+                <option value="list1">Pune</option>
+                <option value="list2">Mumbai</option>
+                <option value="list3">Hydrabad</option>
+            </select>
+        </div>
+        <div>
+            <label>Trading Cakes</label>
+            <select name="city" style="background:transparent; border:0px; padding:0px; margin-left: 0px; width: 20px;">
+                <option value="list1">Pune</option>
+                <option value="list2">Mumbai</option>
+                <option value="list3">Hydrabad</option>
+            </select>
+        </div>
+        <div>
+            <label>Desserts</label>
+            <select name="city" style="background:transparent; border:0px; padding:0px; margin-left: 0px; width: 20px;">
+                <option value="list1">Pune</option>
+                <option value="list2">Mumbai</option>
+                <option value="list3">Hydrabad</option>
+            </select>
+        </div>
+        <div>
+            <label>Designer Cakes</label>
+            <select name="city" style="background:transparent; border:0px; padding:0px; margin-left: 0px; width: 20px;">
+                <option value="list1">Pune</option>
+                <option value="list2">Mumbai</option>
+                <option value="list3">Hydrabad</option>
+            </select>
+        </div>
+        <div>
+            <label>Birthday</label>
+            <select name="city" style="background:transparent; border:0px; padding:0px; margin-left: 0px; width: 20px;">
+                <option value="list1">Pune</option>
+                <option value="list2">Mumbai</option>
+                <option value="list3">Hydrabad</option>
+            </select>
+        </div>
+        <div>
+            <label>Flavours</label>
+            <select name="city" style="background:transparent; border:0px; padding:0px; margin-left: 0px; width: 20px;">
+                <option value="list1">Pune</option>
+                <option value="list2">Mumbai</option>
+                <option value="list3">Hydrabad</option>
+            </select>
+        </div>
+        <div>
+            <label>Anniversary</label>
+            <select name="city" style="background:transparent; border:0px; padding:0px; margin-left: 0px; width: 20px;">
+                <option value="list1">Pune</option>
+                <option value="list2">Mumbai</option>
+                <option value="list3">Hydrabad</option>
+            </select>
+        </div>
+        <div>
+            <label>Occasions</label>
+            <select name="city" style="background:transparent; border:0px; padding:0px; margin-left: 0px; width: 20px;">
+                <option value="list1">Pune</option>
+                <option value="list2">Mumbai</option>
+                <option value="list3">Hydrabad</option>
+            </select>
+        </div>
+
+    </header>
+
+    <section>
+        <div class="card">
+            <img src="./cake2.jpg" alt="" srcset="">
+            <div class="card2-text">
+                <h2>ART OF</h2>
+                <h1>fine</h1>
+                <h3>BAKING</h3>
+            </div>
+
+        </div>
+        <div class="card">
+            <img src="./cake1.jpg" alt="" srcset="">
+            <div class="card1-text">
+                <h2>YOUR TICKET TO</h2>
+                <h1>Divine</h1>
+                <h3>DESSERTS</h3>
+            </div>
+
+        </div>
+        <div class="card">
+            <img src="./cake3.jpg" alt="" srcset="">
+            <div class="card3-text">
+                <h2>MAKE A</h2>
+                <h1>Wish</h1>
+                <h3>& INDULGE</h3>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>

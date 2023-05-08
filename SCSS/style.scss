@@ -1,0 +1,177 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+$fontSize: 1.8rem;
+$fontSize1: 2.5rem;
+$fontSize2: 8rem;
+
+@mixin flexcommon {
+  display: flex;
+  align-items: center;
+}
+
+@mixin imageStyle {
+  margin-left: 15px;
+  height: 30px;
+  width: 30px;
+}
+
+@mixin commonStyle {
+  color: whitesmoke;
+  position: absolute;
+}
+
+nav {
+  height: 60px;
+  width: 100vw;
+
+  display: flex;
+  justify-content: space-between;
+
+  .section1 {
+    @include flexcommon;
+    gap: 20px;
+    font-size: $fontSize;
+    margin-left: 2rem;
+
+    h1 {
+      font-style: italic;
+      color: red;
+      font-size: 4rem;
+      font-family: "PT Sans Narrow", sans-serif;
+    }
+  }
+  .section2 {
+    @include flexcommon;
+    width: 28%;
+  }
+
+  .section2 input {
+    padding: 10px 0px;
+    width: 100%;
+  }
+
+  .section3 {
+    margin-right: 2rem;
+    font-size: $fontSize;
+    @include flexcommon;
+    gap: 30px;
+
+    img {
+      @include imageStyle;
+    }
+  }
+}
+
+.middle-header {
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: $fontSize - 0.3rem;
+  cursor: pointer;
+  border: 2px solid rgb(246, 242, 242);
+}
+
+section {
+  @include flexcommon;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 30px;
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height: 45rem;
+    width: 40rem;
+    font-family: arial;
+    border-radius: 25px;
+
+    img {
+      height: 45rem;
+      width: 40rem;
+      border-radius: 25px;
+    }
+    .card1-text h2 {
+      @include commonStyle;
+      top: 22rem;
+      left: 64rem;
+      font-size: $fontSize1;
+    }
+
+    .card1-text h1 {
+      @include commonStyle;
+      top: 22rem;
+      left: 50rem;
+      font-size: $fontSize2;
+    }
+    .card1-text h3 {
+      @include commonStyle;
+      top: 30rem;
+      left: 50rem;
+      font-size: $fontSize1;
+    }
+
+    .card3-text h2 {
+      @include commonStyle;
+      top: 22rem;
+      left: 93rem;
+      font-size: $fontSize1;
+    }
+
+    .card3-text h1 {
+      @include commonStyle;
+      top: 23rem;
+      left: 93rem;
+      font-size: $fontSize2;
+    }
+    .card3-text h3 {
+      @include commonStyle;
+      top: 31rem;
+      left: 93rem;
+      font-size: $fontSize1;
+    }
+    .card2-text h2 {
+      @include commonStyle;
+      top: 22rem;
+      left: 17rem;
+      font-size: $fontSize1;
+    }
+    .card2-text h1 {
+      @include commonStyle;
+      top: 22rem;
+      left: 12rem;
+      font-size: $fontSize2;
+    }
+    .card2-text h3 {
+      @include commonStyle;
+      top: 29rem;
+      left: 12rem;
+      font-size: $fontSize1;
+    }
+  }
+}
+
+button[type="submit"] {
+  text-indent: -999px;
+  overflow: hidden;
+  width: 40px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid transparent;
+  border-radius: inherit;
+  background: transparent
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
+    no-repeat center;
+  cursor: pointer;
+  opacity: 0.7;
+  position: absolute;
+  right: 62rem;
+}
